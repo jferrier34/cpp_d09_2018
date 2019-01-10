@@ -24,6 +24,7 @@ typedef struct s_koala {
 } koala_t;
 
 cthulhu_t *new_cthulhu(void);
+koala_t *new_koala(char *name, char is_a_legend);
 void print_power(cthulhu_t *this);
 void attack(cthulhu_t *this);
 void sleeping(cthulhu_t *this);

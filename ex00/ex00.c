@@ -63,12 +63,12 @@ void sleeping(cthulhu_t *this)
   printf("\n");
 }
 
-koala_t *New_koala(char *m_name, char _isALegend)
+koala_t *new_koala(char *name, char _isALegend)
 {
   koala_t *new_koala_;
 
   new_koala_ = malloc(sizeof(koala_t));
-  koala_initializer(new_koala_, m_name, _isALegend);
+  koala_initializer(new_koala_, name, _isALegend);
   return (new_koala_);
 }
 

@@ -13,18 +13,17 @@
 #include <iostream>
 
 class Character {
-protected:
         private:
-                int level;
-                std::string name;
+                int my_level;
+                std::string my_name;
 
-                int Strength;
-                int Stamina;
-                int Intelligence;
-                int Spirit;
-                int Agility;
-                int Pv;
-                int Energy;
+                int my_Strength;
+                int my_Stamina;
+                int my_Intelligence;
+                int my_Spirit;
+                int my_Agility;
+                int my_Pv;
+                int my_Energy;
 
         public:
                 Character(const std::string &name, int level);
@@ -43,7 +42,7 @@ protected:
 
                 enum AttackRange {
                 CLOSE,
-                RANGE,
+                RANGE
                 };
                 AttackRange Range;
 };

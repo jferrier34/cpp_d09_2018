@@ -9,17 +9,19 @@
 
 //this is constructor and the destructor
 
-Character::Character(const std::string &my_name, int my_level)
+Character::Character(const std::string &name, int level)
 {
-        this->name = my_name;
-        this->level = my_level;
-        this->Pv = 100;
-        this->Strength = 100;
-        this->Intelligence = 5;
-        this->Energy = 100;
-        this->Spirit = 5;
-        this->Agility = 5;
-        std::cout << this->name << " Created" << std::endl;
+        this->my_name = name;
+        this->my_level = level;
+        this->my_Pv = 100;
+        this->my_Strength = 5;
+        this->my_Intelligence = 5;
+        this->my_Energy = 100;
+        this->my_Spirit = 5;
+        this->my_Agility = 5;
+        this->my_Stamina = 5;
+        this->Range = Character::CLOSE;
+        std::cout << my_name << " Created" << std::endl;
 }
 
 Character::~Character()
@@ -30,73 +32,74 @@ Character::~Character()
 
 const std::string &Character::getName() const
 {
-        return(this->name);
+        return(this->my_name);
 }
 
 int Character::getLvl() const
 {
-        return(this->level);
+        return(this->my_level);
 }
 
 int Character::getPower() const
 {
-        return(this->Energy);
+        return(this->my_Energy);
 }
 
 int Character::getPv() const
 {
-    return(this->Pv);
+    return(this->my_Pv);
 }
 
 
 
 //this is the procedures
 
-int Character::CloseAttack(void)
+int Character::CloseAttack()
 {
-        if (this->Energy < 10)
-                std::cout << this->name << "out of power" << std::endl;
-                else if (this->Energy > 10) {
-                        this->Energy = Energy - 10;
-                        std::cout << this->name << " strikes with a wooden stick" << std::endl;
-                }
-        return (this->Strength);
+        if (this->my_Energy >= 10) {
+                std::cout << this->my_name << " strikes with a wooden strick" << std::endl;
+                return (this->my_Strength = my_Strength + 10);
+        } else
+                std::cout << this->my_name << " out of power" << std::endl;
+                return (0);
 }
 
 int Character::RangeAttack(void)
 {
-        if (this->Energy < 10)
-              std::cout << this->name << " out of power" << std::endl;
-              else if (this->Energy > 10) {
-                              this->Energy = Energy + 5;
-                              std::cout << this->name << " tosses a stone" << std::endl;
-                      }
-        return (this->Strength);
+        if (this->my_Energy >= 10) {
+                this->my_Energy = my_Energy - 10;
+                std::cout << this->my_name << " tosses a stone" << std::endl;
+                return (this->my_Strength = my_Strength + 5);
+        } else 
+                std::cout << this->my_name << " takes a potion" << std::endl;
+        return (0);
 }
 
 
 
 void Character::TakeDamage(int damage)
 {
-        this->Pv = Pv - damage;
-        if (this->Pv <= 0) {
-                this->Energy = 0;
-                std::cout << this->name << " out of combat" << std::endl;
-        } else 
-                std::cout << this->name << " takes " << damage << " damage" << std::endl;
+        this->my_Pv = my_Pv - damage;
+        if (this->my_Pv <= 0) {
+                this->my_Pv = 0;
+                std::cout << this->my_name << " out of combat" << std::endl;
+        }  if (this->my_Pv > 0) {
+                std::cout << this->my_name << " takes " << damage << " damage" << std::endl;
+        }
 }
 
 void Character::Heal(void)
 {
-        this->Pv = Pv + 50;
-        if (this->Pv > 100) {
-                this->Pv = 100;
-        std::cout << this->name << " takes a potion" << std::endl;
+        this->my_Pv = my_Pv + 50;
+        if (this->my_Pv > 100) {
+                this->my_Pv = 100;
+        std::cout << this->my_name << " takes a potion" << std::endl;
         }
 }
 
 void Character::RestorePower(void)
 {
-        this->Energy = 100;
-        std::cout << this->name << " eats" << std::endl;
+        this->my_Energy = 100;
+        std::cout << this->my_name << " eats" << std::endl;
 }
+

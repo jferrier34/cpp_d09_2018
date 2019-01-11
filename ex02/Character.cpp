@@ -88,8 +88,8 @@ void Character::Heal(void)
         this->Pv = Pv + 50;
         if (this->Pv > 100) {
                 this->Pv = 100;
-        std::cout << this->name << " takes a potion" << std::endl;
         }
+        std::cout << this->name << " takes a potion" << std::endl;
 }
 
 void Character::RestorePower(void)

@@ -37,7 +37,7 @@ int Warrior::CloseAttack()
 int Warrior::RangeAttack()
 {
         if (this->Energy >= 10) {
-                std::cout << this->name << "intercepts" << std::endl;
+                std::cout << this->name << " intercepts" << std::endl;
                 return (this->Energy = Energy - 10);
         }
         else {
@@ -45,3 +45,4 @@ int Warrior::RangeAttack()
                 return (0);
         }
 }
+

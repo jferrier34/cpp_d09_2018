@@ -41,11 +41,11 @@ protected:
                 void Heal();
                 void RestorePower();
 
-        enum AttackRange {
+                enum AttackRange {
                 CLOSE,
                 RANGE,
-        };
-        AttackRange Range;
+                };
+                AttackRange Range;
 };
 
 #endif

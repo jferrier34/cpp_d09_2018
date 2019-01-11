@@ -59,9 +59,10 @@ int Character::CloseAttack()
         if (this->my_Energy >= 10) {
                 std::cout << this->my_name << " strikes with a wooden strick" << std::endl;
                 return (this->my_Strength = my_Strength + 10);
-        } else
+        } else {
                 std::cout << this->my_name << " out of power" << std::endl;
                 return (0);
+	}
 }
 
 int Character::RangeAttack(void)

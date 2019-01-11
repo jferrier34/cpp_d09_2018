@@ -1,8 +1,8 @@
-/*                                                                       
-** EPITECH PROJECT, 2019                                                 
-** ex00.h                                                              
-** File description:                                                     
-** ex00.h                                                              
+/*
+** EPITECH PROJECT, 2019
+** ex00.h
+** File description:
+** ex00.h
 */
 
 #include "ex00.h"
@@ -59,7 +59,7 @@ void attack(cthulhu_t *this)
 void sleeping(cthulhu_t *this)
 {
   this->m_power += 42000;
-  printf("%s slepps", this->m_name);
+  printf("%s sleeps", this->m_name);
   printf("\n");
 }
 
@@ -78,4 +78,3 @@ void eat(koala_t *this)
   printf("%s eats", this->m_parent.m_name);
   printf("\n");
 }
-

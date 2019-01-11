@@ -1,8 +1,8 @@
-/*                                                                       
-** EPITECH PROJECT, 2019                                                 
-** ex00.h                                                              
-** File description:                                                     
-** ex00.h                                                              
+/*
+** EPITECH PROJECT, 2019
+** ex00.h
+** File description:
+** ex00.h
 */
 
 #ifndef _EX_ZERO_H_

@@ -97,3 +97,4 @@ void Character::RestorePower(void)
         this->Energy = 100;
         std::cout << this->name << " eats" << std::endl;
 }
+

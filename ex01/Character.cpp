@@ -43,6 +43,10 @@ int Character::getPower() const
         return(this->Energy);
 }
 
+int Character::getPv() const
+{
+    return(this->Pv);
+}
 
 
 
